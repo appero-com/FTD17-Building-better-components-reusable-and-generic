@@ -1,0 +1,10 @@
+<aura:component extends="c:v2AbstractComponent" controller="AuraActionDemoController" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="contactList" type="Contact[]" />
+    
+    <lightning:input aura:id="filterInput" type="text" name="filterInput" label="v2: Contact filter" />
+    <lightning:button label="get Contacts" onclick="{!c.onSubmitButtonClick}" />
+    
+	<aura:iteration items="{!v.contactList}" var="contact">
+    	<p>{!contact.Name}</p>
+    </aura:iteration>
+</aura:component>

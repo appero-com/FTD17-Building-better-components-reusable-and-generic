@@ -1,0 +1,12 @@
+<aura:component extensible="true" abstract="true">
+    
+    <aura:method name="callApex" action="{!c.onCallApex}">
+        <aura:attribute name="component" type="Aura.Component" />
+        <aura:attribute name="controllerMethod" type="String" />
+        <aura:attribute name="actionParameters" type="Object" />
+        <aura:attribute name="successCallback" type="Object" />
+    </aura:method>
+    
+    {!v.body}
+    
+</aura:component>
